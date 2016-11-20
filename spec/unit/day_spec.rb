@@ -1,4 +1,4 @@
-describe Day, focus: true do
+describe Day do
 
   it '#spread returns the difference between min and max temp (ex one)' do
     day = described_class.new(min: 5, max: 10)

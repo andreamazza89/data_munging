@@ -1,4 +1,4 @@
-describe DayParser, '#extract_days', focus: true do
+describe DayParser, '#extract_days' do
 
   context 'When the input string does not include any days' do
   
