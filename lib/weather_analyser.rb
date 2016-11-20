@@ -9,7 +9,7 @@ class WeatherAnalyser
 
   def min_spread
     day_with_min_spread = @day_parser.extract_days.min_by { |day| day.spread }
-    day_with_min_spread.spread
+    day_with_min_spread.day_of_the_month
   end
 
 end

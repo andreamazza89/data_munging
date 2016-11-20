@@ -20,9 +20,10 @@ class DayParser
     regex_captures = data.match(DAY_REGEX)
     max_temp = regex_captures[:max_temp].to_i
     min_temp = regex_captures[:min_temp].to_i
-    Day.new(max: max_temp, min: min_temp)
+    day = regex_captures[:day].to_i
+    Day.new(max: max_temp, min: min_temp, day_of_the_month: day)
   end
 
-  DAY_REGEX = /^\s*\d{1,2}\s*(?<max_temp>\d{1,3})\s*(?<min_temp>\d{1,3})/
+  DAY_REGEX = /^\s*(?<day>\d{1,2})\s*(?<max_temp>\d{1,3})\s*(?<min_temp>\d{1,3})/
 
 end
